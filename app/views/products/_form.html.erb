@@ -85,7 +85,10 @@
     <%= form.text_field :size %>
   </div>
 
+  <%= form.file_field :images, multiple:true %>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
 <% end %>
