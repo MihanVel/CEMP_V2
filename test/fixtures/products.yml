@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  about: MyString
+  description: MyText
+  price: 9.99
+  buy_now_price: 9.99
+  product_condition: MyString
+  brand: MyString
+  is_featured: false
+  is_on_sale: false
+  is_refundable: false
+  is_disputable: false
+  quantity: 1
+  weight: 9.99
+  size: MyString
+
+two:
+  title: MyString
+  about: MyString
+  description: MyText
+  price: 9.99
+  buy_now_price: 9.99
+  product_condition: MyString
+  brand: MyString
+  is_featured: false
+  is_on_sale: false
+  is_refundable: false
+  is_disputable: false
+  quantity: 1
+  weight: 9.99
+  size: MyString

@@ -1,0 +1,91 @@
+<%= form_with(model: @product, local: true) do |form| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <ul>
+        <% @product.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :about %>
+    <%= form.text_field :about %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :buy_now_price %>
+    <%= form.number_field :buy_now_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_condition %>
+    <%= form.text_field :product_condition %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.select :category_id, options_for_select(@categories.map { |c| [c.category_name, c.id] }), {}, class: 'form-control' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_featured %>
+    <%= form.check_box :is_featured %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_on_sale %>
+    <%= form.check_box :is_on_sale %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_refundable %>
+    <%= form.check_box :is_refundable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :is_disputable %>
+    <%= form.check_box :is_disputable %>
+  </div>
+
+  <div class="field">
+    <%= form.label :quantity %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.number_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
