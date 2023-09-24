@@ -43,6 +43,7 @@
   <div class="field">
     <%= form.label :category_id %>
     <%= form.select :category_id, options_for_select(@categories.map { |c| [c.category_name, c.id] }), {}, class: 'form-control' %>
+    <%= link_to 'Add Category', new_category_path %>
   </div>
 
   <div class="field">

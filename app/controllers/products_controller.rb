@@ -41,12 +41,11 @@ class ProductsController < ApplicationController
   end
 
   def destroy
-    if @product.destroy
-      respond_to do |format|
+    @product = Product.find(params[:id])
+    respond_to do |format|
+      if @product.destroy
         format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
-      end
-    else
-      respond_to do |format|
+      else
         format.html { redirect_to products_url, alert: 'Failed to destroy the product.' }
       end
     end
