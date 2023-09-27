@@ -1,3 +1,7 @@
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
 <h1><%= @product.title %></h1>
 <%= javascript_include_tag 'application' %>
 
