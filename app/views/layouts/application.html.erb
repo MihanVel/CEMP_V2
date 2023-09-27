@@ -39,6 +39,11 @@
 
   <body>
     <%= render "layouts/navbar" %>
+
+    <!-- Adding for check status of the user -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    
     <%= yield %>
     <%= render "layouts/footer" %>
   

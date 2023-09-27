@@ -11,13 +11,23 @@
         </div>
         <div class="col-lg-6 text-center text-lg-right">
             <div class="d-inline-flex align-items-center">
-                <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <button class="dropdown-item" type="button">Sign in</button>
-                        <button class="dropdown-item" type="button">Sign up</button>
-                    </div>
-                </div>
+            <div class="btn-group">
+            <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">
+                <% if current_user %>
+                    My Profile
+                <% else %>
+                    Sign In/Sign Up
+                <% end %>
+            </button>
+            <div class="dropdown-menu dropdown-menu-right">
+                <% if current_user %>
+                    <%= link_to "Log Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                <% else %>
+                    <%= link_to "Sign In", new_user_session_path, class: "dropdown-item" %>
+                    <%= link_to "Sign Up", new_user_registration_path, class: "dropdown-item" %>
+                <% end %>
+            </div>
+        </div>
                 <div class="btn-group mx-2">
                     <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">USD</button>
                     <div class="dropdown-menu dropdown-menu-right">
