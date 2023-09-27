@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'home/index'
   resources :categories 
   
   resources :products
@@ -7,4 +6,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
    root "home#index"
+
+   # Add routes for "about" and "contact" pages
+    get "/about", to: "home#about"
+    get "/contact", to: "home#contact"
 end
