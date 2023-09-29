@@ -12,4 +12,7 @@ class HomeController < ApplicationController
   def shop
   end
   
+  def detailproduct
+  end
+  
 end
