@@ -12,4 +12,5 @@ Rails.application.routes.draw do
    # Add routes for "about" and "contact" pages
     get "/about", to: "home#about"
     get "/contact", to: "home#contact"
+    get "/shop", to: "home#shop"
 end
